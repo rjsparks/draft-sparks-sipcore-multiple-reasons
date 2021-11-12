@@ -7,7 +7,7 @@
 <title>Multiple SIP Reason Header Field Values</title>
 <meta content="Robert Sparks" name="author">
 <meta content="
-       The RFC 3326 definition of the SIP Reason Header Field requires multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means. 
+       The RFC 3326 definition of the SIP Reason Header Field restricts multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means. 
     " name="description">
 <meta content="xml2rfc 3.11.1" name="generator">
 <meta content="Internet-Draft" name="keyword">
@@ -1077,7 +1077,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <h1 id="title">Multiple SIP Reason Header Field Values</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">The RFC 3326 definition of the SIP Reason Header Field requires multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">The RFC 3326 definition of the SIP Reason Header Field restricts multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1190,18 +1190,19 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-update-to-rfc3326">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-update-to-rfc3326" class="section-name selfRef">Update to RFC3326</a>
       </h2>
-<p id="section-3-1">OLD:
+<p id="section-3-1">The last paragraph of section 2 of <span>[<a href="#RFC3326" class="xref">RFC3326</a>]</span> is replaced as follows:<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">OLD:
    A SIP message <span class="bcp14">MAY</span> contain more than one Reason value (i.e., multiple
    Reason lines), but all of them <span class="bcp14">MUST</span> have different protocol values
    (e.g., one SIP and another Q.850).  An implementation is free to
-   ignore Reason values that it does not understand.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">NEW:<a href="#section-3-2" class="pilcrow">¶</a></p>
-<p id="section-3-3">A SIP message <span class="bcp14">MAY</span> contain more than one Reason value (i.e., multiple
+   ignore Reason values that it does not understand.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3">NEW:<a href="#section-3-3" class="pilcrow">¶</a></p>
+<p id="section-3-4">A SIP message <span class="bcp14">MAY</span> contain more than one Reason value (i.e., multiple
    Reason lines). If the registered protocol for the Reason value specifies
    what it means for multiple values to occur in one message, more than one
    value for that protocol <span class="bcp14">MAY</span> be present. Otherwise, the <span class="bcp14">MUST</span> only one be
    one value per protocol provided (e.g., one SIP and another Q.850).  An
-   implementation is free to ignore Reason values that it does not understand.<a href="#section-3-3" class="pilcrow">¶</a></p>
+   implementation is free to ignore Reason values that it does not understand.<a href="#section-3-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
