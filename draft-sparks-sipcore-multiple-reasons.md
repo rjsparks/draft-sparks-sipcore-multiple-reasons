@@ -56,7 +56,7 @@ NEW:
    A SIP message MAY contain more than one Reason value (i.e., multiple
    Reason lines). If the registered protocol for the Reason value specifies
    what it means for multiple values to occur in one message, more than one
-   value for that protocol MAY be present. Otherwise, the MUST only one be
+   value for that protocol MAY be present. Otherwise, there MUST only one be
    one value per protocol provided (e.g., one SIP and another Q.850).  An
    implementation is free to ignore Reason values that it does not understand.
 
