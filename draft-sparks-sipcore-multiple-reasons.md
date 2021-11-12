@@ -34,7 +34,7 @@ The RFC 3326 definition of the SIP Reason Header Field requires multiple values 
 
 # Introduction
 
-{{RFC 3326}} definition of the SIP Reason Header Field requires multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means.
+{{RFC3326}} definition of the SIP Reason Header Field requires multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means.
 
 # Conventions and Definitions
 
