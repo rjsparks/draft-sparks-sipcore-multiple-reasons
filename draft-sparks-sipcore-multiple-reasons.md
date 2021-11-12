@@ -1,35 +1,13 @@
 ---
-# Internet-Draft Markdown Template
-#
-# Rename this file from draft-todo-yourname-protocol.md to get started.
-# Draft name format is draft-<yourname>-<workgroup>-<name>.md
-#
-# Set the "title" field below at the same time.  The "abbrev" field should be
-# updated too.  "abbrev" can be deleted if your title is short.
-#
-# You can edit the contents of the document as the same time.
-# Initial setup only needs the filename and title.
-# If you change title or name later, you can run the "Rewrite README" action.
-#
-# Do not include "-latest" in the file name.
-# The tools use "draft-<name>-latest" to find the draft name *inside* the draft,
-# such as the "docname" field below, and replace it with a draft number.
-# The "docname" field below can be left alone: it will be updated for you.
-#
-# This template uses kramdown-rfc2629: https://github.com/cabo/kramdown-rfc2629
-# You can replace the entire file if you prefer a different format.
-# Change the file extension to match the format (.xml for XML, etc...)
-#
-# Delete this comment when you are done.
-#
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "Multiple SIP Reason Header Field Values"
+abbrev: "Multiple reasons"
 docname: draft-sparks-sipcore-multiple-reasons-latest
-category: info
+category: std
+updates: 3326
 
 ipr: trust200902
-area: TODO
-workgroup: TODO Working Group
+area: ART
+workgroup: SIPCORE Working Group
 keyword: Internet-Draft
 
 stand_alone: yes
@@ -38,36 +16,50 @@ pi: [toc, sortrefs, symrefs]
 
 author:
  -
-    name: Your Name Here
-    organization: Your Organization Here
-    email: your.email@example.com
+    name: Robert Sparks
+    organization: 
+    email: rjsparks@nostrum.com
 
 normative:
-
+  RFC3326: RFC3326
+  
 informative:
 
 
 --- abstract
 
-TODO Abstract
-
+The RFC 3326 definition of the SIP Reason Header Field requires multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means.
 
 --- middle
 
 # Introduction
 
-TODO Introduction
-
+{{RFC 3326}} definition of the SIP Reason Header Field requires multiple values to one per protocol values. Practice shows there is value in allowing multiple values with the same protocol value. This update to RFC 3326 relaxes the restriction to allow multiple values for an indicated registered protocol when that protocol defines what multiple values in the Reason header field sharing that protocol means.
 
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
+# Update to RFC3326
+
+OLD:
+   A SIP message MAY contain more than one Reason value (i.e., multiple
+   Reason lines), but all of them MUST have different protocol values
+   (e.g., one SIP and another Q.850).  An implementation is free to
+   ignore Reason values that it does not understand.
+
+NEW:
+
+   A SIP message MAY contain more than one Reason value (i.e., multiple
+   Reason lines). If the registered protocol for the Reason value specifies
+   what it means for multiple values to occur in one message, more than one
+   value for that protocol MAY be present. Otherwise, the MUST only one be
+   one value per protocol provided (e.g., one SIP and another Q.850).  An
+   implementation is free to ignore Reason values that it does not understand.
 
 # Security Considerations
 
-TODO Security
-
+This document adds no security considerations to the use of SIP. The security considerations in {{RFC3326}} and those in any registered protocols used in Reason header field values should be considered.
 
 # IANA Considerations
 
@@ -77,6 +69,4 @@ This document has no IANA actions.
 --- back
 
 # Acknowledgments
-{:numbered="false"}
-
-TODO acknowledge.
+This text is based on discussions at a STIR working group interim meeting.
