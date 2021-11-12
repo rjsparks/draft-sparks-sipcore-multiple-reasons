@@ -18,8 +18,8 @@ Abstract
    multiple values to one per protocol values.  Practice shows there is
    value in allowing multiple values with the same protocol value.  This
    update to RFC 3326 allows multiple values for an indicated registered
-   protocol when that protocol defines what multiple values in the
-   Reason header field sharing that protocol means.
+   protocol when that protocol defines what the presence of multiple
+   values means.
 
 Discussion Venues
 
@@ -80,8 +80,8 @@ Table of Contents
    values to one per protocol values.  Practice shows there is value in
    allowing multiple values with the same protocol value.  This update
    to RFC 3326 allows multiple values for an indicated registered
-   protocol when that protocol defines what multiple values in the
-   Reason header field sharing that protocol means.
+   protocol when that protocol defines what the presence of multiple
+   values means.
 
 2.  Conventions and Definitions
 
